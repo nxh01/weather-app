@@ -21,9 +21,9 @@ You need to clone or download from github, open with vscode (visual studio code)
 
 ## Built With
 
-- [HTML]()
+- []()
 - [Sass]()
-- [Javascript]()
+- []()
 
 ## Contributing
 
