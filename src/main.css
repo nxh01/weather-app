@@ -1,0 +1,351 @@
+@font-face {
+  font-family: "modelicaLight";
+  src: url(/src/assets/fonts/ModelicaLight.otf);
+}
+@font-face {
+  font-family: "modelicaMedium";
+  src: url(/src/assets/fonts/ModelicaMedium.otf);
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: url(/src/assets/images/cloudy.jpg);
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "modelicaLight";
+  font-weight: lighter;
+  transition: 0.7s all ease-in-out;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  height: 100vh;
+  width: 100%;
+}
+
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  font-family: "modelicaLight";
+}
+a:hover {
+  color: #dea571;
+}
+
+.nav__collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 130px;
+  height: 130px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(165, 165, 165, 0.2);
+  border-radius: 20px 0px 20px 20px;
+  cursor: pointer;
+}
+.nav__collapse:hover .nav__collapse-btn {
+  background-color: #dea571;
+}
+.nav__collapse:hover .nav__collapse-btn::before {
+  background-color: #dea571;
+  transition: 0.7s all ease-in-out;
+}
+.nav__collapse .nav__collapse-btn {
+  width: 47px;
+  height: 1px;
+  background-color: #fff;
+}
+.nav__collapse .nav__collapse-btn::before {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.7s all ease-in-out;
+  transform: rotate(0);
+  transform-origin: right;
+}
+.nav__collapse .open {
+  width: 25px;
+  transform-origin: right;
+  transform: rotate(45deg);
+}
+.nav__collapse .open::before {
+  transition: 0.7s all ease-in-out;
+  width: 25px;
+  transform-origin: right;
+  transform: rotate(-90deg);
+}
+
+.nav-btn-hide {
+  margin-right: 40px;
+  margin-top: 40px;
+  width: 50px;
+  height: 50px;
+  -webkit-backdrop-filter: unset;
+          backdrop-filter: unset;
+  background-color: transparent;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-top: 34px;
+}
+.home .home__title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.home .home__title h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: "modelicaLight";
+  font-weight: lighter;
+  margin: 0;
+}
+.home .home__title h1 span {
+  color: #cccccc;
+}
+.home .home__title h2 {
+  color: #cccccc;
+  font-size: 30px;
+  font-family: "modelicaLight";
+  font-weight: lighter;
+  margin: 0;
+}
+.home .home__info {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: left;
+}
+.home .home__info h1 {
+  font-size: 120px;
+  color: #fff;
+  font-family: "modelicaMedium" !important;
+  font-weight: lighter !important;
+  margin: 0;
+}
+.home .home__info .home__info-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.home .home__info .home__info-content h1 {
+  font-size: 50px;
+  color: #fff;
+  font-family: "modelicaLight" !important;
+  font-weight: lighter !important;
+  margin: 0;
+}
+.home .home__info .home__info-content p {
+  font-size: 25px;
+  color: #cccccc;
+  font-family: "modelicaLight" !important;
+  font-weight: lighter !important;
+  margin: 0;
+}
+.home .home__info .home__info-content p span {
+  font-size: 20px;
+}
+
+.navbar {
+  width: 130px;
+  max-width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(165, 165, 165, 0.2);
+  border-radius: 20px 0px 20px 20px;
+  overflow: hidden;
+  opacity: 0;
+}
+.navbar .nav__input {
+  display: flex;
+}
+.navbar .nav__input svg {
+  position: relative;
+  right: 35px;
+  bottom: 1px;
+}
+
+.navbar-open {
+  width: 100%;
+  max-width: 1000px;
+  height: 280px;
+  padding: 60px 66px 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  visibility: visible;
+  opacity: 100;
+}
+.navbar-open .nav__content {
+  opacity: 100;
+}
+.navbar-open .nav__input {
+  display: flex;
+  width: 560px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 100;
+  overflow: hidden;
+}
+.navbar-open .nav__input svg {
+  position: relative;
+  right: 35px;
+  bottom: 1px;
+  cursor: pointer;
+}
+.navbar-open .nav__input input {
+  opacity: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.seperator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 100;
+}
+
+.nav__head {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  bottom: 20px;
+}
+.nav__head .nav__input {
+  width: 560px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 100;
+  overflow: hidden;
+}
+.nav__head .nav__input input {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  color: #fff;
+  font-family: "modelicaLight";
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #fff;
+  padding-bottom: 5px;
+  outline: none;
+}
+.nav__head .nav__input input::-moz-placeholder {
+  font-size: 30px;
+  font-family: "modelicaLight";
+  color: #cccccc;
+}
+.nav__head .nav__input input:-ms-input-placeholder {
+  font-size: 30px;
+  font-family: "modelicaLight";
+  color: #cccccc;
+}
+.nav__head .nav__input input::placeholder {
+  font-size: 30px;
+  font-family: "modelicaLight";
+  color: #cccccc;
+}
+.nav__head .nav__input input:focus {
+  border-bottom: 1px solid #dea571;
+}
+
+.nav__content {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.nav__content .recent__cities {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-right: 10px;
+}
+.nav__content .recent__cities ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+.nav__content .recent__cities ul li {
+  font-size: 30px;
+  color: #cccccc;
+  font-family: "modelicaLight";
+  cursor: pointer;
+}
+.nav__content .weather__content {
+  display: flex;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+  row-gap: 80px;
+  padding-left: 20px;
+  border-left: 0.5px solid rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.nav__content .weather__content .weather__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 268px;
+}
+.nav__content .weather__content .weather__details h1 {
+  font-size: 30px;
+  font-family: "modelicaMedium";
+  color: #fff;
+  margin: 0;
+}
+.nav__content .weather__content .weather__details .weather__details-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.nav__content .weather__content .weather__details .weather__details-content div {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__content .weather__content .weather__details .weather__details-content div p {
+  color: #cccccc;
+  font-size: 20px;
+  font-family: "modelicaLight";
+  margin: 0;
+}/*# sourceMappingURL=main.css.map */

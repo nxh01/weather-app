@@ -1,0 +1,25 @@
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  font-family: $font-light;
+  &:hover {
+    color: $hover-color;
+  }
+}
+// h1 {
+//   font-family: $font-light ;
+// }
+// h2 {
+//   font-family: $font-medium !important;
+// }
+// h3{
+//     font-family: $font-medium;
+// }
+// p {
+//   font-family: $font-light;
+// }

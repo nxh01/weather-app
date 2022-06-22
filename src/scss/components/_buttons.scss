@@ -1,0 +1,61 @@
+.nav__collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 130px;
+  height: 130px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(165, 165, 165, 0.2);
+  border-radius: 20px 0px 20px 20px;
+  cursor: pointer;
+  &:hover {
+    .nav__collapse-btn {
+      background-color: $hover-color;
+      &::before {
+        background-color: $hover-color;
+        transition: 0.7s all ease-in-out;
+      }
+    }
+  }
+  .nav__collapse-btn {
+    width: 47px;
+    height: 1px;
+    background-color: $main-text-color;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 1px;
+      background-color: $main-text-color;
+      transition: 0.7s all ease-in-out;
+      transform: rotate(0);
+      transform-origin: right;
+    }
+  }
+  .open {
+    width: 25px;
+    transform-origin: right;
+    transform: rotate(45deg);
+  }
+  .open::before {
+    transition: 0.7s all ease-in-out;
+    width: 25px;
+    transform-origin: right;
+    transform: rotate(-90deg);
+  }
+}
+
+.nav-btn-hide {
+  margin-right: 40px;
+  margin-top: 40px;
+  width: 50px;
+  height: 50px;
+  backdrop-filter: unset;
+  background-color: transparent;
+}

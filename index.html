@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Weather App</title>
+    <!-- Logo -->
+    <link rel="icon" href="favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/main.css">
+</head>
+
+<body>
+    <div class="nav__collapse">
+        <div class="nav__collapse-btn"></div>
+    </div>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="nav__head">
+
+                <div class="nav__input">
+                    <input type="text" class="search" id="search" placeholder="Search...">
+                    <svg class="search-icon" width="38" height="39" viewBox="0 0 38 39" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="15.5" stroke="white" />
+                        <line x1="26.3616" y1="26.6547" x2="37.1049" y2="37.9043" stroke="white" />
+                    </svg>
+
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="nav__content">
+                <div class="recent__cities">
+                    <ul>
+                        <li class="recent">
+                            Prishtina
+                        </li>
+                        <li class="recent">
+                            Tokyo
+                        </li>
+                        <li class="recent">
+                            Gjakova
+                        </li>
+                    </ul>
+                </div>
+                <div class="weather__content">
+                    <div class="weather__details">
+                        <h1>City Details</h1>
+                        <div class="weather__details-content">
+                            <div class="city">
+                                <p>City</p>
+                                <p id="city"></p>
+                            </div>
+                            <div class="latitude">
+                                <p>Latitude</p>
+                                <p id="latitude"></p>
+                            </div>
+                            <div class="longitude">
+                                <p>Longitude</p>
+                                <p id="longitude"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather__details">
+                        <h1>Weather Details</h1>
+                        <div class="weather__details-content">
+                            <div class="clouds">
+                                <p>Clouds</p>
+                                <p id="clouds"></p>
+                            </div>
+                            <div class="rain">
+                                <p>Humidity</p>
+                                <p id="humidity"></p>
+                            </div>
+                            <div class="wind">
+                                <p>Wind</p>
+                                <p id="wind"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <main class="home">
+            <div class="home__title">
+                <h1>Sunny <span>Weather</span></h1>
+                <h2>Clear Sky</h2>
+            </div>
+            <div class="home__info">
+                <h1 id="temp">28°</h1>
+                <div class="home__info-content">
+                    <h1 id="city">Prishtina</h1>
+                    <p id="time">10:00 <span>am</span> - Monday, 10 2022</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Javascript linked -->
+    <script src="./src/js/WeatherApi.js"></script>
+    <script src="./src/js/home/home.js"></script>
+    <script src="./src/js/navbar/navbar.js"></script>
+</body>
+
+</html>
