@@ -132,6 +132,7 @@ a:hover {
   font-family: "modelicaLight";
   font-weight: lighter;
   margin: 0;
+  text-transform: capitalize;
 }
 .home .home__info {
   display: flex;
@@ -310,6 +311,7 @@ a:hover {
   color: #cccccc;
   font-family: "modelicaLight";
   cursor: pointer;
+  text-transform: capitalize;
 }
 .nav__content .weather__content {
   display: flex;
