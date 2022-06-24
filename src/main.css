@@ -10,8 +10,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background: url(/src/assets/images/cloudy.jpg);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -26,6 +25,17 @@ body {
   flex-direction: row-reverse;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 840px) {
+  .wrapper {
+    justify-content: end;
+    flex-direction: column;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 a,
@@ -103,6 +113,61 @@ a:hover {
           backdrop-filter: unset;
   background-color: transparent;
 }
+@media only screen and (max-width: 410px) {
+  .nav-btn-hide {
+    margin-right: 10px;
+    margin-top: 40px;
+  }
+}
+
+.clear_sky {
+  background: url(/src/assets/images/sunny.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.thunder_storm {
+  background: url(/src/assets/images/thunderstorm.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.drizzle {
+  background: url(/src/assets/images/drizzle.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.rain {
+  background: url(/src/assets/images/rain.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.snow {
+  background: url(/src/assets/images/snow.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fog {
+  background: url(/src/assets/images/fog.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cloudy {
+  background: url(/src/assets/images/cloudy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .home {
   display: flex;
@@ -110,6 +175,15 @@ a:hover {
   justify-content: space-between;
   padding-left: 30px;
   padding-top: 34px;
+}
+@media only screen and (max-width: 380px) {
+  .home {
+    padding-left: 10px;
+    padding-top: 0px;
+  }
+  .home .temp-header {
+    font-size: 120px !important;
+  }
 }
 .home .home__title {
   display: flex;
@@ -151,6 +225,11 @@ a:hover {
   font-family: "modelicaMedium" !important;
   font-weight: lighter !important;
   margin: 0;
+}
+@media only screen and (max-width: 355px) {
+  .home .home__info h1 {
+    font-size: 90px;
+  }
 }
 .home .home__info .home__info-content {
   display: flex;
@@ -197,6 +276,9 @@ a:hover {
   right: 35px;
   bottom: 1px;
 }
+.navbar .nav__input:hover svg {
+  color: black;
+}
 
 .navbar-open {
   width: 100%;
@@ -205,12 +287,51 @@ a:hover {
   padding: 60px 66px 30px;
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
+  row-gap: 20px;
   visibility: visible;
   opacity: 100;
 }
+@media only screen and (max-width: 840px) {
+  .navbar-open {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .navbar-open {
+    height: 580px;
+  }
+}
 .navbar-open .nav__content {
   opacity: 100;
+}
+@media only screen and (max-width: 480px) {
+  .navbar-open .nav__content {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: baseline;
+  }
+  .navbar-open .nav__content .weather__content {
+    width: 100%;
+    padding: 0;
+    border: none;
+    padding-right: 30px;
+    justify-content: left;
+  }
+}
+@media only screen and (max-width: 480px) and (max-width: 840px) {
+  .navbar-open .nav__content .weather__content {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbar-open .nav__content .recent__cities ul {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .navbar-open .nav__input {
   display: flex;
@@ -231,6 +352,7 @@ a:hover {
   opacity: 100;
   width: 100%;
   height: 100%;
+  text-transform: capitalize;
 }
 
 .seperator {
@@ -247,6 +369,16 @@ a:hover {
   align-items: center;
   position: relative;
   bottom: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .nav__head {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 545px) {
+  .nav__head {
+    width: 70%;
+  }
 }
 .nav__head .nav__input {
   width: 560px;
@@ -308,10 +440,13 @@ a:hover {
 }
 .nav__content .recent__cities ul li {
   font-size: 30px;
-  color: #cccccc;
+  color: #fff;
   font-family: "modelicaLight";
   cursor: pointer;
   text-transform: capitalize;
+}
+.nav__content .recent__cities ul li:hover {
+  color: #dea571;
 }
 .nav__content .weather__content {
   display: flex;
@@ -330,6 +465,11 @@ a:hover {
   row-gap: 20px;
   width: 268px;
 }
+@media only screen and (max-width: 840px) {
+  .nav__content .weather__content .weather__details {
+    padding-right: 100px;
+  }
+}
 .nav__content .weather__content .weather__details h1 {
   font-size: 30px;
   font-family: "modelicaMedium";
@@ -341,6 +481,11 @@ a:hover {
   flex-direction: column;
   row-gap: 15px;
 }
+@media only screen and (max-width: 300px) {
+  .nav__content .weather__content .weather__details .weather__details-content {
+    padding-right: 30px;
+  }
+}
 .nav__content .weather__content .weather__details .weather__details-content div {
   display: flex;
   justify-content: space-between;
@@ -350,4 +495,14 @@ a:hover {
   font-size: 20px;
   font-family: "modelicaLight";
   margin: 0;
+}
+
+@media only screen and (max-width: 340px) {
+  .navbar-open {
+    padding-left: 15px;
+  }
+
+  .recent__cities ul {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -13,6 +13,7 @@
   backdrop-filter: blur(15px);
   background-color: rgba(165, 165, 165, 0.2);
   border-radius: 20px 0px 20px 20px;
+
   cursor: pointer;
   &:hover {
     .nav__collapse-btn {
@@ -58,4 +59,8 @@
   height: 50px;
   backdrop-filter: unset;
   background-color: transparent;
+  @media only screen and(max-width: 410px) {
+    margin-right: 10px;
+    margin-top: 40px;
+  }
 }

@@ -4,6 +4,15 @@
   justify-content: space-between;
   padding-left: 30px;
   padding-top: 34px;
+
+  // Mobile Devices
+  @media only screen and(max-width: 380px) {
+    padding-left: 10px;
+    padding-top: 0px;
+    .temp-header {
+      font-size: 120px !important;
+    }
+  }
   .home__title {
     display: flex;
     flex-direction: column;
@@ -42,6 +51,9 @@
       font-family: $font-medium !important;
       font-weight: lighter !important;
       margin: 0;
+      @media only screen and(max-width: 355px) {
+        font-size: 90px;
+      }
     }
     .home__info-content {
       display: flex;
