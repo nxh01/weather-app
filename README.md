@@ -17,7 +17,8 @@ Requirements for the software and other tools to build, test and push
 You need to clone or download from github, open with vscode (visual studio code) and the index.html file you need to host it with live server extension on VScode, you also need another extension called "Live Sass Compiler" so you can watch Scss files in your browser.
 
 ### Preview
-![weatherApp](https://user-images.githubusercontent.com/80894732/174676264-1a0b3d74-f0be-4e2c-b448-0ea26c3d339d.png)
+![weatherApp](https://user-images.githubusercontent.com/80894732/175437060-e5d6d632-3dd4-4a9e-b1d8-dbbbbf43f8b8.png)
+
 
 ## Built With
 
