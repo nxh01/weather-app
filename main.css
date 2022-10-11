@@ -1,10 +1,10 @@
 @font-face {
   font-family: "modelicaLight";
-  src: url("src/assets/fonts/ModelicaLight.otf");
+  src: url("./assets/fonts/ModelicaLight.otf");
 }
 @font-face {
   font-family: "modelicaMedium";
-  src: url("src/assets/fonts/ModelicaMedium.otf");
+  src: url("./assets/fonts/ModelicaMedium.otf");
 }
 body {
   box-sizing: border-box;
@@ -121,35 +121,35 @@ a:hover {
 }
 
 .clear_sky {
-  background: url("../../../src/assets/images/sunny.jpg");
+  background: url("./assets/images/sunny.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .thunder_storm {
-  background: url("../../../src/assets/images/thunderstorm.jpg");
+  background: url("./assets/images/thunderstorm.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .drizzle {
-  background: url("../../../src/assets/images/drizzle.jpg");
+  background: url("./assets/images/drizzle.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .rain {
-  background: url("../../../src/assets/images/rain.jpg");
+  background: url("./assets/images/rain.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .snow {
-  background: url("../../../src/assets/images/snow.jpg");
+  background: url("./assets/images/snow.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -163,7 +163,7 @@ a:hover {
 }
 
 .cloudy {
-  background: url("../../../src/assets/images/cloudy.jpg");
+  background: url("./assets/images/cloudy.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
