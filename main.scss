@@ -1,0 +1,14 @@
+// Importing Abstracts Style
+@import "./src/scss/abstracts/variables";
+
+// Importing Base Style
+@import "./src/scss/base/base";
+@import "./src/scss/base/typography";
+
+// Importing Components Style
+@import "./src/scss/components/buttons";
+@import "./src/scss/components/weather";
+
+// Importing Sections Style
+@import "./src/scss/sections/home";
+@import "./src/scss/sections/navbar";
